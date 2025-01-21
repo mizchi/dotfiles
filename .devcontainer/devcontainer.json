@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+	"features": {
+		"ghcr.io/devcontainers/features/rust:1": {},
+		"ghcr.io/devcontainers-community/features/deno:1": {},
+		"ghcr.io/schlich/devcontainer-features/starship:0": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"installOhMyZsh": "true",
+			"installOhMyZshConfig": "true",
+			"configureZshAsDefaultShell": "true"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"workbench.panel.defaultLocation": "right",
+				"terminal.integrated.defaultProfile.linux": "zsh"
+			},
+			"extensions": [
+				"GitHub.copilot",
+				"RooVeterinaryInc.roo-cline"
+			]
+		}
+	}
+}
